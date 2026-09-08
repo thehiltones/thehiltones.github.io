@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hymns Lyrics Guesser</title>
+        <!-- <script src="js/types.js"></script> -->
+        <script type="module" src="/js/main.js"></script>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/main.css"/>
+        
+        <link rel="icon" href="images/image.png">
+    </head>
+    <body>
+        <header>
+            <a href="/" title="Return to the home page"><img src="images/image.png" alt="Hiltones logo"></a>
+            <h1>Hymns Lyrics Guesser</h1>
+        </header>
+        <div id="controls">
+            <a href="/play.html">Guess Random Song</a>
+            <div class="line"></div>
+        </div>
+        <main>
+            <p>All songs:</p>
+            <div class="lists">
+                <ul id="left-list">
+                    <!-- %for song in songs:
+                        %if song['n']%2==0:
+                            <li><a href="/play?song={{song['n']}}">{{song['title']}}</a></li>
+                        %end
+                    %end -->
+                </ul>
+                <ul id="right-list">
+                    <!-- %for song in songs:
+                        %if song['n']%2==1:
+                            <li><a href="/play?song={{song['n']}}">{{song['title']}}</a></li>
+                        %end
+                    %end -->
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
