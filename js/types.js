@@ -19,4 +19,8 @@ export const HILTONES_INDEX = ["000.json", "001.json", "002.json", "003.json",
     "082.json", "083.json", "084.json", "085.json", "086.json", "087.json",
     "088.json", "089.json", "090.json"];
 
+export const HYMNS_INDEX = ["1001.json", "1002.json", "1003.json", "1004.json",
+    "1005.json", "1006.json", "1007.json", "1008.json", "1009.json",
+    "1201.json", "1202.json", "1203.json", "1204.json"];
+
 export const BASE_URL = "https://raw.githubusercontent.com/thehiltones/LyricGuesser/main/lyrics/hiltones/"
