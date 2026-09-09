@@ -4,6 +4,19 @@ import { Matcher } from "/js/Matcher.js"
 let n_found = 0
 let matcher;
 
+const findGetParameter = (parameterName) => {
+    let result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+
 const IS_HYMNS = findGetParameter("hymns");
 console.log(IS_HYMNS);
 
@@ -54,19 +67,6 @@ const clearAnimation = () => {
     // the next correct guess
     const guess = document.getElementById('guess');
     guess.style.animation = "";
-}
-
-const findGetParameter = (parameterName) => {
-    let result = null,
-        tmp = [];
-    location.search
-        .substr(1)
-        .split("&")
-        .forEach(function (item) {
-          tmp = item.split("=");
-          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-        });
-    return result;
 }
 
 const getNewLyricsBlock = () => {
