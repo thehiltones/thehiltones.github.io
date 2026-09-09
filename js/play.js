@@ -1,4 +1,4 @@
-import { HILTONES_INDEX, BASE_URL } from "/js/types.js"
+import { HILTONES_INDEX, HYMNS_INDEX, BASE_URL } from "/js/types.js"
 import { Matcher } from "/js/Matcher.js"
 
 let n_found = 0
@@ -153,7 +153,7 @@ const initialize = () => {
         song = Math.floor(Math.random() * HILTONES_INDEX.length);
         song = String(song).padStart(3, '0') + '.json';
     }
-    xhttp.open("GET", BASE_URL + song, true);
+    xhttp.open("GET", `${BASE_URL}/hiltones/${song}`, true);
     xhttp.send();
 }
 
