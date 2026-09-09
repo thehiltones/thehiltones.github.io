@@ -4,6 +4,9 @@ import { Matcher } from "/js/Matcher.js"
 let n_found = 0
 let matcher;
 
+const IS_HYMNS = findGetParameter("hymns");
+console.log(IS_HYMNS);
+
 const handleGuess = function(exact_words, indices, give_up) {
     n_found += indices.length;
     const guess = document.getElementById('guess');
