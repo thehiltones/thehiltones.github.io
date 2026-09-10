@@ -84,6 +84,10 @@ const updateScore = () => {
 }
 
 const initialize = () => {
+    if (hymns) {
+        const homeButton = document.querySelector("#home");
+        homeButton.href = "/hmyns.html";
+    }
     const guess = document.getElementById('guess');
     guess.addEventListener('input', inputHandler);
     guess.addEventListener('propertychange', inputHandler); // for IE8
@@ -152,11 +156,20 @@ const initialize = () => {
         updateScore();
     };
     let song = findGetParameter("song");
-    if (!HILTONES_INDEX.includes(song)) {
-        song = Math.floor(Math.random() * HILTONES_INDEX.length);
-        song = String(song).padStart(3, '0') + '.json';
+    if (IS_HYMNS) {
+        if (!HYMNS_INDEX.includes(song)) {
+            song = Math.floor(Math.random() * HYMNS_INDEX.length);
+            song = String(song).padStart(3, '0') + '.json';
+        }
+        xhttp.open("GET", `${BASE_URL}/hymns/${song}`, true);
     }
-    xhttp.open("GET", `${BASE_URL}/hiltones/${song}`, true);
+    else {
+        if (!HILTONES_INDEX.includes(song)) {
+            song = Math.floor(Math.random() * HILTONES_INDEX.length);
+            song = String(song).padStart(3, '0') + '.json';
+        }
+        xhttp.open("GET", `${BASE_URL}/hiltones/${song}`, true);
+    }
     xhttp.send();
 }
 
