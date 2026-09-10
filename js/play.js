@@ -86,7 +86,7 @@ const updateScore = () => {
 const initialize = () => {
     if (IS_HYMNS) {
         const homeButton = document.querySelector("#home");
-        homeButton.href = "/hmyns.html";
+        homeButton.href = "/hymns.html";
         const homeImage = document.querySelector("#home_image");
         homeImage.src = "images/hymns.png";
         document.querySelector("header").style.backgroundColor = "#185641";
