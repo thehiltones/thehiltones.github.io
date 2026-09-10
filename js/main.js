@@ -46,7 +46,12 @@ const list_songs = function() {
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     let title = JSON.parse(this.responseText)['title'];
+                    if (IS_HYMNS) {
+                        a.innerHTML = SONG_INDEX[i].split('.')[0] + ' ' + title;
+                    }
+                    else {
                         a.innerHTML = title;
+                    }
                 }
             };
             xhttp.open("GET",
