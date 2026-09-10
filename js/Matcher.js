@@ -39,7 +39,7 @@ class Matcher {
         "wandering": "wandring",
         "long": "longawaited",
         "offering": "offring",
-        "covenant": "cov'nant"
+        "covenant": "cov'nant",
     }
 
     /**
