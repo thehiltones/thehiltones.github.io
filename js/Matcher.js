@@ -38,7 +38,8 @@ class Matcher {
         "power": "powr",
         "wandering": "wandring",
         "long": "longawaited",
-        "offering": "offring"
+        "offering": "offring",
+        "covenant": "cov'nant"
     }
 
     /**
