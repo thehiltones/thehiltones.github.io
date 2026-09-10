@@ -125,6 +125,9 @@ const initialize = () => {
             for (let i = 0; i < title.split(/\s+/).length; i++) {
                 let div = document.createElement("div");
                 div.classList.add("word");
+                if (IS_HYMNS) {
+                    div.style.backgroundColor = "#185641";
+                }
                 titleDiv.appendChild(div);
             }
             let lyricBlock = getNewLyricsBlock();
