@@ -1,6 +1,6 @@
 import { HILTONES_INDEX, HYMNS_INDEX, BASE_URL } from "/js/types.js"
 
-const IS_HYMNS = location.href.includes("hymns");
+const IS_HYMNS = location.href.split("?")[0].includes("hymns");
 const SONG_TYPE = IS_HYMNS ? "hymns" : "hiltones";
 const SONG_INDEX = IS_HYMNS ? HYMNS_INDEX : HILTONES_INDEX
 

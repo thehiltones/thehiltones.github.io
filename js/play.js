@@ -18,7 +18,6 @@ const findGetParameter = (parameterName) => {
 }
 
 const IS_HYMNS = findGetParameter("hymns");
-console.log(IS_HYMNS);
 
 const handleGuess = function(exact_words, indices, give_up) {
     n_found += indices.length;
@@ -168,8 +167,7 @@ const initialize = () => {
     }
     else {
         if (!HILTONES_INDEX.includes(song)) {
-            song = Math.floor(Math.random() * HILTONES_INDEX.length);
-            song = String(song).padStart(3, '0') + '.json';
+            song = HILTONES_INDEX[Math.floor(Math.random() * HILTONES_INDEX.length)];
         }
         xhttp.open("GET", `${BASE_URL}/hiltones/${song}`, true);
     }
