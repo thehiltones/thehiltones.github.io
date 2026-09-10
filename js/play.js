@@ -145,7 +145,10 @@ const initialize = () => {
                     }
                     else {
                         let div = document.createElement("div");
-                        div.classList.add("word");  
+                        div.classList.add("word");
+                        if (IS_HYMNS) {
+                            div.style.backgroundColor = "#185641";
+                        }
                         lyricBlock.appendChild(div);
                     }
                 }
