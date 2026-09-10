@@ -84,9 +84,12 @@ const updateScore = () => {
 }
 
 const initialize = () => {
-    if (hymns) {
+    if (IS_HYMNS) {
         const homeButton = document.querySelector("#home");
         homeButton.href = "/hmyns.html";
+        const homeImage = document.querySelector("home_image");
+        homeImage.src = "images/hymns.png";
+        document.querySelector("header").style.backgroundColor = "#185641";
     }
     const guess = document.getElementById('guess');
     guess.addEventListener('input', inputHandler);

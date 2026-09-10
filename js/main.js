@@ -5,6 +5,13 @@ const SONG_TYPE = IS_HYMNS ? "hymns" : "hiltones";
 const SONG_INDEX = IS_HYMNS ? HYMNS_INDEX : HILTONES_INDEX
 
 const list_songs = function() {
+    if (IS_HYMNS) {
+        const homeButton = document.querySelector("#home");
+        homeButton.href = "/hmyns.html";
+        const homeImage = document.querySelector("home_image");
+        homeImage.src = "images/hymns.png";
+        document.querySelector("header").style.backgroundColor = "#185641";
+    }
     let leftList = document.querySelector("#left-list");
     let rightList = document.querySelector("#right-list");
     for (let i = 0; i < SONG_INDEX.length; i++) {
